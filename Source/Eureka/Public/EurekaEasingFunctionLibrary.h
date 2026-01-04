@@ -16,22 +16,22 @@ class EUREKA_API UEurekaEasingFunctionLibrary : public UBlueprintFunctionLibrary
 	
 
 public:
-	UFUNCTION(BlueprintPure, Category = "Easing")
+	UFUNCTION(BlueprintPure, Category = "Eureka|Math|Easing")
 	static float Linear(float f);
 
-	UFUNCTION(BlueprintPure, Category = "Easing")
+	UFUNCTION(BlueprintPure, Category = "Eureka|Math|Easing")
 	static float EaseIn(float f);
 
-	UFUNCTION(BlueprintPure, Category = "Easing")
+	UFUNCTION(BlueprintPure, Category = "Eureka|Math|Easing")
 	static float EaseOut(float f);
 
-	UFUNCTION(BlueprintPure, Category = "Easing")
+	UFUNCTION(BlueprintPure, Category = "Eureka|Math|Easing")
 	static float SmoothStep(float f);
 
-	UFUNCTION(BlueprintPure, Category = "Easing")
+	UFUNCTION(BlueprintPure, Category = "Eureka|Math|Easing")
 	static float EaseOutElastic(float f);
 
-	UFUNCTION(BlueprintPure, Category = "Easing")
+	UFUNCTION(BlueprintPure, Category = "Eureka|Math|Easing")
 	static float OutBounce(float f);
 
 
