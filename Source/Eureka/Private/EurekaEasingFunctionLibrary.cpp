@@ -27,32 +27,32 @@ float UEurekaEasingFunctionLibrary::SmoothStep(float f)
 
 float UEurekaEasingFunctionLibrary::EaseOutElastic(float f)
 {
-	float p = 0.5f;
-	return FMath::Pow(2, -10 * f) * FMath::Sin((f - p / 4) * (2 * PI) / p) + 1;
+    const float Period = 0.5f;
+    return FMath::Pow(2.0f, -10.0f * f) * FMath::Sin((f - Period / 4.0f) * (2.0f * PI) / Period) + 1.0f;
 }
 
 float UEurekaEasingFunctionLibrary::OutBounce(float f)
 {
-    float div = 2.75f;
-    float mult = 7.5625f;
+    const float Divisor = 2.75f;
+    const float Multiplier = 7.5625f;
 
-    if (f < 1 / div)
+    if (f < 1.0f / Divisor)
     {
-        return mult * f * f;
+        return Multiplier * f * f;
     }
-    else if (f < 2 / div)
+    else if (f < 2.0f / Divisor)
     {
-        f -= 1.5f / div;
-        return mult * f * f + 0.75f;
+        f -= 1.5f / Divisor;
+        return Multiplier * f * f + 0.75f;
     }
-    else if (f < 2.5 / div)
+    else if (f < 2.5f / Divisor)
     {
-        f -= 2.25f / div;
-        return mult * f * f + 0.9375f;
+        f -= 2.25f / Divisor;
+        return Multiplier * f * f + 0.9375f;
     }
     else
     {
-        f -= 2.625f / div;
-        return mult * f * f + 0.984375f;
+        f -= 2.625f / Divisor;
+        return Multiplier * f * f + 0.984375f;
     }
 }
